@@ -23,3 +23,23 @@ const obj = {0 : 1, 1 : 2}; // obj is not iterable, for..of 대신에 for..in �
 for (const item in obj) { // obj 안의 key를 출력
     console.log(item); // 0 1
 }
+
+const iterator = array.values();
+/*for (const item of iterator) {
+    console.log(item); // 1 2 3
+}*/
+
+console.log('next() 호출', iterator.next()); // { value: 1, done: false } => 값 (value), 반복 종료 여부 (done)
+console.log('next() 호출', iterator.next().value); // 2
+console.log('next() 호출', iterator.next().value); // 3
+console.log('next() 호출', iterator.next()); // { value: undefined, done: true }
+
+const fruits = ['🍉', '🍍', '🍒'];
+const iterator2 = fruits.values();
+while (true) {
+    const item = iterator2.next();
+    if (item.done) { // done: true 이면
+        break;
+    }
+    console.log(item.value); // done: false 이면, value 출력
+}
