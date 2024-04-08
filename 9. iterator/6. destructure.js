@@ -36,3 +36,17 @@ console.log(name); // 조승연
 console.log(age); // 27
 console.log(occupation); // artist
 console.log(signature); // 🦊
+
+// 구조 분해 할당 Quiz
+const prop = {
+    name: 'Button',
+    styles: {
+        size: 20,
+        color: 'black'
+    }
+};
+
+function changeColor({ styles : { color } }) {
+    console.log(color);
+}
+changeColor(prop);
