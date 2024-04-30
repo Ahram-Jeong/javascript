@@ -63,3 +63,8 @@ Object.defineProperties(student, {
 });
 console.log(student); // { firstName: '승연', lastName: '조' }
 console.log(student.fullName); // 조 승연
+
+student.fullName = '황 민현'; // fullName을 set 할 경우 split 값을 제대로 넣어줘야 함
+console.log(student.lastName); // 황
+console.log(student.firstName); // 민현
+console.log(student.fullName); // 황 민현
