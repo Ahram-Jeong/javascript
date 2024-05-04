@@ -37,3 +37,10 @@ Tiger.prototype.hunt = () => {
 const tiger1 = new Tiger('호랑이', '🐯');
 tiger1.printName();
 tiger1.hunt();
+
+console.log(dog1 instanceof Dog); // true
+console.log(dog1 instanceof Animal); // true
+console.log(dog1 instanceof Tiger); // false
+console.log(tiger1 instanceof Dog); // false
+console.log(tiger1 instanceof Animal); // true
+console.log(tiger1 instanceof Tiger); // true
